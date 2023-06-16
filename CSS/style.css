@@ -433,3 +433,9 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .grid--1X3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
