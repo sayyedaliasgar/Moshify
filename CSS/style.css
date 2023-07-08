@@ -106,7 +106,7 @@ a {
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 2rem;
-    white-space: nowarp;
+    white-space: nowrap;
 }
 
 .badge--primary {
@@ -204,7 +204,7 @@ a {
     font-size: 1.8rem;
     font-weight: 600;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     text-align: center;
     margin: 1rem 0;
@@ -297,6 +297,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -383,7 +384,7 @@ a {
 
 .plan--popular .card__header::before {
     content: url(/Images/popular.svg);
-    width: 40px;
+    width: 30px;
     display: inline-block;
     position: absolute;
     top: -6px;
@@ -495,6 +496,12 @@ a {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .grid--1X21 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Testimonial */
 .testimonial {
     padding: 3rem;
@@ -516,7 +523,9 @@ a {
 
 .testimonial-complete {
     padding: 5rem;
+    margin-bottom: 15rem;
 }
+
 
 @media screen and (min-width: 768px) {
     .testimonial .quote,
@@ -532,7 +541,11 @@ a {
 .callout {
     padding: 4rem;
     border-radius: 5px;
-}
+    position: absolute;
+    margin: auto;
+    max-width: 1100px;
+    top: 145rem;
+    }
 
 .callout--primary {
     background: var(--color-primary);
@@ -548,23 +561,44 @@ a {
 .callout .btn {
     justify-self: center;
     align-self: center;
+    width: 320px;
+    height: 70px;
 }
 
 .callout__content {
     text-align: center;
 }
 
+.callout__positioning {
+    position: relative;
+}
+
 @media screen and (min-width: 768px) {
     .callout .grid--1X2 {
         grid-template-columns: 1fr auto;
     }
+
     .callout__content {
         text-align: left;
     }
+    
     .callout .btn {
         justify-self: start;
         margin: 0 2rem;
-    }    
+        width: 220px;
+        height: 60px;
+    }
+
+    .callout__positioning .callout {
+        left: 15rem;
+        right: 15rem;
+        width: auto;
+        top: 90rem;    
+    }
+    .callout__positioning .footer {
+        padding-top: 15rem;
+    }
+    
 }
 /* Collapsibles */
 .collapsible__header {
@@ -721,7 +755,6 @@ a {
         text-align: left;
         align-self: center;
     }
-    
 }
 
 /* Domain Block */
@@ -732,8 +765,9 @@ a {
 }
 
 .block-domain__prices {
+    color: var(--color-heading);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -803,6 +837,7 @@ a {
 /* Footer */
 .footer {
     background: #232323;
+    padding-top: 25rem;
 }
 
 .footer__section .list {
